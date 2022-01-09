@@ -13,7 +13,7 @@ POSSEscreen is for displaying and flowing subtitles on your screens like Niconic
 1. Start POSSEscreen client.
 1. Access POSSEscreen web pages and send messages as an audience.
 
-[Detailed instruction for the setup is here.](./Docs/SETUP.md)
+[Detailed instruction for the setup is here.](./docs/SETUP.md)
 
 ## Known issues
 
