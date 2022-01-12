@@ -7,7 +7,7 @@ const fireStore = admin.firestore();
 
 export const slackToScreen = functions.https.onRequest((request, response) => {
   if (request) {
-    if (request.body.event.text) {
+    if (request.body && request.body.event && request.body.event.text) {
       const testroom = fireStore.collection("testroom");
       testroom.add({
         datetime: dayjs().format("YYYY-MM-DD HH:mm:ss"),

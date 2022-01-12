@@ -1,11 +1,11 @@
 const config = {
   // spped for moving words
-  speed: 10,
+  speed: 8,
   // random rate for the speed
   // ex. speed=10, sppedRate=80 means random speed with 80% range so actual speed=8to12
-  speedRate: 80,
+  speedRate: 70,
   // font
-  font: "64pt Arial Black",
+  font: "50pt Arial Black",
   // style for fill of words
   fillStyle: [
     "rgb(255,255,255)",
