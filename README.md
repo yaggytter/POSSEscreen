@@ -4,6 +4,14 @@ POSSEscreen is for displaying and flowing subtitles on your screens like Niconic
 
 ![POSSEscreen](./docs/img/possescreen.gif)
 
+## Available features
+
+- Multi display
+- A slack channel as a client
+- Random color for messages
+- Random speed for messages
+- Changing fonts for messages
+
 ## Setup
 
 1. Prepare a Firebase environment.
