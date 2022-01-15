@@ -71,17 +71,23 @@ yarn build
 
 - Deploy the web application to Firebase hosting.
 
-You have to replace `PROJECTNAME` in following command to your exact project name which is configured by the previous procedure.
+You can see project ids for Firebase projects to execute a following command.
 
 ```
 firebase login
-firebase use PROJECTNAME
+firebase projects:list
+```
+
+You have to replace `PROJECTID` in a following command to your exact project name which is configured by the previous procedure.
+
+```
+firebase use PROJECTID
 firebase deploy
 ```
 
-- You can see the web application on https://PROJECTNAME.web.app
+- You can see the web application on https://PROJECTID.web.app
 
-You have to replace `PROJECTNAME` in the URL to your exact project name which is configured by the previous procedure.
+You have to replace `PROJECTID` in the URL to your exact project name which is configured by the previous procedure.
 
 ## Build and use POSSEscreen the Client.
 
@@ -112,9 +118,9 @@ npm start
 
 - You can send comments using Web Front Application to show the comment to your screen.
 
-## Distribute the Client package for Windows, MacOS or Linux
+## Distribute a Client package for Windows, MacOS or Linux
 
-If you want to distribute the Client package, You can use [electron-packager](https://github.com/electron/electron-packager) to create the package.
+If you want to distribute a Client package, You can use [electron-packager](https://github.com/electron/electron-packager) to create the package.
 
 For example, If you want to create the package for MacOS with M1 Processer, execute a following command in client directory.
 

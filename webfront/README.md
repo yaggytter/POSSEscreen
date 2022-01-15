@@ -1,7 +1,7 @@
 ## Getting Started
 
 ```bash
-yarn build
+yarn install
 ```
 
 - edit firebaseConfig in index.tsx

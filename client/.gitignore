@@ -1,0 +1,6 @@
+firebase.ts
+node_modules
+dist
+
+POSSEscreen-darwin-*
+POSSEscreen-win*
