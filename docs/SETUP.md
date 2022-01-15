@@ -120,7 +120,7 @@ npm start
 
 ## Distribute a Client package for Windows, MacOS or Linux
 
-If you want to distribute a Client package, You can use [electron-packager](https://github.com/electron/electron-packager) to create the package.
+If you want to distribute the Client package, You can use [electron-packager](https://github.com/electron/electron-packager) to create the package.
 
 For example, If you want to create the package for MacOS with M1 Processer, execute a following command in client directory.
 
