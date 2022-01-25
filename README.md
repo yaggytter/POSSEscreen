@@ -26,7 +26,6 @@ POSSEscreen is for displaying and flowing subtitles on your screens like Niconic
 ## Known issues
 
 - POSSEscreen still doesn't have a security functions such as Authentication and Authorization.
-- The shadow of the character string remains, If you will change an active application from POSSEscreen to another application after showing some comments.
 - POSSEscreen still doesn't have a test code.
 - POSSEscreen is still using both npm and yarn.
 
