@@ -29,6 +29,7 @@ function showWindow(roomname, x, y, width, height, workAreaHeight) {
     transparent: true,
     resizable: false,
     alwaysOnTop: true,
+    focusable: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
