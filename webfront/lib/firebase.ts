@@ -1,15 +1,14 @@
 import { initializeApp } from "firebase/app";
 
-//// replace this area --->
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "XXXXX",
-  authDomain: "XXXXX.firebaseapp.com",
-  projectId: "XXXXX",
-  storageBucket: "XXXXX.appspot.com",
-  messagingSenderId: "XXXXX",
-  appId: "XXXXX",
+  apiKey: "AIzaSyDpJxfjEYKSRiBPNbz8P2hPWPVSwTMal0A",
+  authDomain: "mypossescreen-994da.firebaseapp.com",
+  projectId: "mypossescreen-994da",
+  storageBucket: "mypossescreen-994da.appspot.com",
+  messagingSenderId: "411938907850",
+  appId: "1:411938907850:web:13b577de17c1d9f8897633"
 };
-//// <--- replace this area
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
