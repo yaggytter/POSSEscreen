@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, KeyboardEvent } from "react";
 import styled from "styled-components";
 import dayjs from "dayjs";
 import {
@@ -58,6 +58,13 @@ const Home = (props: ContainerProps) => {
     setMessage("");
   };
 
+  const enterPost = (keyEvent: KeyboardEvent) => {
+    if (!message.trim()) return;
+    if (keyEvent.key == "Enter" && (keyEvent.ctrlKey || keyEvent.metaKey)) {
+      handleSubmit();
+    }
+  }
+
   useEffect(() => {
     const q = query(collection(db, roomname), orderBy("datetime"));
     onSnapshot(q, (querySnapshot) => {
@@ -71,6 +78,7 @@ const Home = (props: ContainerProps) => {
           };
           setNewChat(chat);
         }
+        console.log('newChat displayed!')
       });
     });
   }, []);
@@ -84,6 +92,7 @@ const Home = (props: ContainerProps) => {
       setUserName={setUserName}
       setMessage={setMessage}
       handleSubmit={handleSubmit}
+      enterPost={enterPost}
     />
   );
 };
@@ -96,6 +105,7 @@ type Props = ContainerProps & {
   setUserName: (value: string) => void;
   setMessage: (value: string) => void;
   handleSubmit: () => void;
+  enterPost: (value: KeyboardEvent) => void;
 };
 
 const Component = (props: Props) => (
@@ -143,6 +153,7 @@ const Component = (props: Props) => (
             fullWidth
             multiline
             rows={3}
+            onKeyDown={props.enterPost}
           />
         </Box>
         <Box display="flex" justifyContent="flex-end">
@@ -151,7 +162,7 @@ const Component = (props: Props) => (
             variant="contained"
             color="primary"
             size="medium"
-            disabled={!props.message}
+            disabled={!props.message.trim()}
             onClick={() => props.handleSubmit()}
           >
             <Send />
