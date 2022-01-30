@@ -59,6 +59,7 @@ const Home = (props: ContainerProps) => {
   };
 
   const enterPost = (keyEvent: KeyboardEvent) => {
+    if (!message.trim()) return;
     if (keyEvent.key == "Enter" && (keyEvent.ctrlKey || keyEvent.metaKey)) {
       handleSubmit();
     }
@@ -161,7 +162,7 @@ const Component = (props: Props) => (
             variant="contained"
             color="primary"
             size="medium"
-            disabled={!props.message}
+            disabled={!props.message.trim()}
             onClick={() => props.handleSubmit()}
           >
             <Send />
