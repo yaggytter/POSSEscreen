@@ -39,6 +39,7 @@
     ![firebase13](./img/13.png)
 
   - Copy your firebaseConfig variable code 
+
     ![firebase14](./img/14.png)
 
   - Make client/src/firebase.ts and webfront/lib/firebase.ts same as the following code and replace firebaseConfig with your own project's firebaseConfig
