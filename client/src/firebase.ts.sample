@@ -1,0 +1,16 @@
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "XXXXX",
+  authDomain: "XXXXX.firebaseapp.com",
+  projectId: "XXXXX",
+  storageBucket: "XXXXX.appspot.com",
+  messagingSenderId: "XXXXX",
+  appId: "XXXXX",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Don't forget to export app
+export default app;
