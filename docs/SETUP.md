@@ -42,11 +42,14 @@
 
     ![firebase14](./img/14.png)
 
-  - Make client/src/firebase.ts and webfront/lib/firebase.ts same as the following code and replace firebaseConfig with your own project's firebaseConfig
+  - Add client/src/firebase.ts and webfront/lib/firebase.ts, paste your firebaseConfig variable code.
+    
+    And don't forget to add `export default app` at the end of the file in order to import from other files.
+
+    Here is the sample code.
     ```
     import { initializeApp } from "firebase/app";
 
-    //// replace this area --->
     const firebaseConfig = {
       apiKey: "XXXXX",
       authDomain: "XXXXX.firebaseapp.com",
@@ -55,14 +58,13 @@
       messagingSenderId: "XXXXX",
       appId: "XXXXX",
     };
-    //// <--- replace this area
 
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
 
     export default app;
     ```
-    
+
 
   - Click Next
     ![firebase15](./img/15.png)
