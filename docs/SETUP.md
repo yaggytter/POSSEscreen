@@ -42,7 +42,7 @@
 
     ![firebase14](./img/14.png)
 
-  - Add client/src/firebase.ts and webfront/lib/firebase.ts, paste your firebaseConfig variable code.
+  - Add `client/src/firebase.ts` and `webfront/lib/firebase.ts`, paste your firebaseConfig variable code.
     
     And don't forget to add `export default app` at the end of the file in order to import from other files.
 
