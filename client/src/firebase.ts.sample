@@ -1,8 +1,5 @@
 import { initializeApp } from "firebase/app";
 
-// You should paste your Firebase configuration to below
-
-//// replace this area --->
 const firebaseConfig = {
   apiKey: "XXXXX",
   authDomain: "XXXXX.firebaseapp.com",
@@ -11,9 +8,9 @@ const firebaseConfig = {
   messagingSenderId: "XXXXX",
   appId: "XXXXX",
 };
-//// <--- replace this area
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+// Don't forget to export app
 export default app;
