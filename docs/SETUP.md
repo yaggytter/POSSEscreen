@@ -38,8 +38,34 @@
   - Name your App nick name, Click Firebase hosting check box to enable it and Click Register app
     ![firebase13](./img/13.png)
 
-  - Copy your firebaseConfig variable code and paste it to [client/src/firebase.ts](../client/src/firebase.ts) and [webfront/lib/firebase.ts](../webfront/lib/firebase.ts) in this repository
+  - Copy your firebaseConfig variable code 
+
     ![firebase14](./img/14.png)
+
+  - Add `client/src/firebase.ts` and `webfront/lib/firebase.ts`, paste your firebaseConfig variable code.
+    
+    And don't forget to add `export default app` at the end of the file in order to import from other files.
+
+    Here is the sample code.
+    ```
+    import { initializeApp } from "firebase/app";
+
+    const firebaseConfig = {
+      apiKey: "XXXXX",
+      authDomain: "XXXXX.firebaseapp.com",
+      projectId: "XXXXX",
+      storageBucket: "XXXXX.appspot.com",
+      messagingSenderId: "XXXXX",
+      appId: "XXXXX",
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    // Don't forget this!
+    export default app;
+    ```
+
 
   - Click Next
     ![firebase15](./img/15.png)
