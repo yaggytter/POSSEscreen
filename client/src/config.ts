@@ -1,6 +1,6 @@
 const config = {
   // spped for moving words
-  speed: 8,
+  speed: 5,
   // random rate for the speed
   // ex. speed=10, sppedRate=80 means random speed with 80% range so actual speed=8to12
   speedRate: 70,
