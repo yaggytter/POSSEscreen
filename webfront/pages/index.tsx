@@ -34,7 +34,7 @@ type ChatType = {
 };
 
 const Home = (props: ContainerProps) => {
-  const roomname = "testroom";
+  const [roomname, setRoomname] = useState<string>("testroom");
   const [newChat, setNewChat] = useState<ChatType>({
     userName: "",
     message: "",
@@ -53,8 +53,7 @@ const Home = (props: ContainerProps) => {
   const handleSubmit = async () => {
     const datetime = dayjs().format("YYYY-MM-DD HH:mm:ss");
     const chat: ChatType = { userName, message, datetime };
-    addDoc(collection(db, roomname), chat);
-
+    setDoc(doc(db, "rooms", roomname, "chats", datetime), chat);
     setMessage("");
   };
 
@@ -63,10 +62,21 @@ const Home = (props: ContainerProps) => {
     if (keyEvent.key == "Enter" && (keyEvent.ctrlKey || keyEvent.metaKey)) {
       handleSubmit();
     }
-  }
+  };
 
   useEffect(() => {
-    const q = query(collection(db, roomname), orderBy("datetime"));
+    let tempRoomName = "";
+    while (tempRoomName == "") {
+      tempRoomName = prompt("ルーム名を入力してください。") || "";
+      if (tempRoomName == "") {
+        continue;
+      }
+      setRoomname(tempRoomName);
+    }
+    const q = query(
+      collection(db, "rooms", tempRoomName, "chats"),
+      orderBy("datetime")
+    );
     onSnapshot(q, (querySnapshot) => {
       querySnapshot.docChanges().forEach((change) => {
         const data = change.doc.data();
@@ -78,7 +88,7 @@ const Home = (props: ContainerProps) => {
           };
           setNewChat(chat);
         }
-        console.log('newChat displayed!')
+        console.log("newChat displayed!");
       });
     });
   }, []);

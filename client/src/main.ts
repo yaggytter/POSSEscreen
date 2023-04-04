@@ -50,7 +50,10 @@ module POSSEscreen {
 
       this.db = getFirestore(app);
 
-      const q = query(collection(this.db, this.roomname), orderBy("datetime"));
+      const q = query(
+        collection(this.db, "rooms", this.roomname, "chats"),
+        orderBy("datetime")
+      );
       onSnapshot(q, (querySnapshot) => {
         querySnapshot.docChanges().forEach((change) => {
           const data = change.doc.data();
