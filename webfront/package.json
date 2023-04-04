@@ -1,5 +1,5 @@
 {
-  "name": "moment-screen-web",
+  "name": "comment-screen-web",
   "private": true,
   "scripts": {
     "dev": "next dev",
